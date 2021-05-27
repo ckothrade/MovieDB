@@ -1,0 +1,20 @@
+Description: A simple plex database stored in text files, possibly utilizing an api to gather film info.
+
+
+
+OMDb API:
+key: 30f3ba26
+http://www.omdbapi.com/?i=tt3896198&apikey=30f3ba26
+
+
+searches:
+&s=jaws   (query on films)
+&t=jaws   (details on specific film)
+
+Example: 
+http://www.omdbapi.com/?i=tt3896198&apikey=30f3ba26&t=jaws
+
+
+
+
+https://www.imdb.com/title/{imdbID}    (an imdb link)

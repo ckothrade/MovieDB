@@ -1,0 +1,26 @@
+.find-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.find-form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+}
+
+section img {
+  width: 300px;
+}
+
+img:hover {
+  margin-left: 0 40px;
+  transform: scale(1.2);
+  cursor: pointer;
+}

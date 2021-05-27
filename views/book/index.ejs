@@ -1,0 +1,33 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <% if(movieData.length > 0) { %>
+            <div class="book">
+                <h2>Your Movies</h2>
+                <table>
+                    <tr>
+                        <th>Title</th>
+                        <th>Year</th>
+                        <th>Production</th>
+                    </tr>
+                    <% for(let movie of movieData) { %>
+                        <tr>
+                            <td><%= movie.title %></td>
+                            <td><%= movie.year %></td>
+                            <td><%= movie.production %></td>
+                        </tr>
+                    <% } %>
+                </table>
+            </div>
+        <% } else { %>
+            <h1>No Movies Currently!</h1>
+        <% } %>
+    </main>
+
+<%- include('../includes/end.ejs') %>
+
+

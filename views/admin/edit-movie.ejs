@@ -1,0 +1,65 @@
+<%- include('../includes/head.ejs') %>
+
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/movie.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <form class = "post-form" action="/admin/<% if (editing) { %>edit-movie<% } else { %>add-movie<% } %>" method="POST">
+            <div class = "form-control"> 
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" value="<% if (editing) { %><%= movie.title %><% } %>">
+            </div>
+            <div class = "form-control"> 
+                <label for="year">Year</label>
+                <input type="text" name="year" id="year" value="<% if (editing) { %><%= movie.year %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="genre">Genre</label>
+                <input type="text" name="genre" id="genre" value="<% if (editing) { %><%= movie.genre %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="rating">Rating</label>
+                <input type="text" name="rating" id="rating" value="<% if (editing) { %><%= movie.rating %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="director">Director</label>
+                <input type="text" name="director" id="director" value="<% if (editing) { %><%= movie.director %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="actors">Actors</label>
+                <input type="text" name="actors" id="actors" value="<% if (editing) { %><%= movie.actors %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="production">Production</label>
+                <input type="text" name="production" id="production" value="<% if (editing) { %><%= movie.production %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="imdbID">imdb ID</label>
+                <input type="text" name="imdbID" id="imdbID" value="<% if (editing) { %><%= movie.imdbID %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="imdbScore">imdb Score</label>
+                <input type="text" name="imdbScore" id="imdbScore" value="<% if (editing) { %><%= movie.imdbScore %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="poster">Poster</label>
+                <input type="text" name="poster" id="poster" value="<% if (editing) { %><%= movie.poster %><% } %>">
+            </div>
+            <div class = "form-control"> 
+                <label for="plot">Plot</label>
+                <textarea name="plot" id="plot" cols="30" rows="10" ><% if (editing) { %><%= movie.plot %><% } %></textarea>
+            </div>
+            <% if (editing) { %>
+                <input type="hidden" value="<%= movie.id %>" name="movieId">
+                <!-- Hidden value to pass field in body request to controller -->
+            <% } %>    
+            
+            <button type="submit"><% if (editing) { %>Update Movie<% } else { %>Add Movie<% } %></button>
+        </form>
+    </main>
+
+<%- include('../includes/end.ejs') %>

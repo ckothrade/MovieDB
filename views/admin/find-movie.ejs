@@ -1,0 +1,48 @@
+<%- include('../includes/head.ejs') %>
+  
+  <link rel="stylesheet" href="/css/forms.css">
+  <link rel="stylesheet" href="/css/search.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+
+      <div class="find-container">
+        <form class="find-form">
+          <div>
+            <h1>Find a Movie Online</h1>
+          </div>
+          <div>
+            <input type="text" id="findInput" class="flextext" >
+            <button type="submit" id="find" class="findbtn">FIND</button>
+          </div>
+        </form>
+        <form class="find-form">
+          <div class="find-search">
+            <h1>Search Keywords</h1>
+          </div>
+          <div class="find-search">
+            <input type="text" id="searchInput" class="flextext" >
+            <button type="submit" id="search" class="findbtn">FIND</button>
+          </div>
+        </form>
+      </div>
+      <div class="media" id="media">
+      </div>
+      <!--
+      <div class="find-container">
+        <h1>Find a Movie Online</h1>
+        <form class="find-form">
+          <input type="text" id="findInput">
+          <button type="submit" id="find">FIND</button>
+        </form>
+      </div>
+
+     -->
+    </main>
+
+    <script src="/js/omdb.js"></script>
+    
+<%- include('../includes/end.ejs') %>

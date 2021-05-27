@@ -1,0 +1,29 @@
+<div class="backdrop"></div>
+<header class="main-header">
+    <nav class = "main-header__nav">
+        <ul class = "main-header__item-list">
+            <li class = "main-header__item">
+                <a class="<%= path === '/' ? 'active' : ''%>" href="/">Library</a>
+            </li>
+            <li class = "main-header__item">
+                <a class="<%= path === '/admin/add-movie' ? 'active' : ''%>" href="/admin/add-movie">Add Movie</a>
+            </li>
+            <li class = "main-header__item">
+                <a class="<%= path === '/admin/find-online' ? 'active' : ''%>" href="/admin/find-online">Find Online</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Section 9 update added here -->
+<nav class="mobile-nav">
+    <ul class="mobile-nav__item-list">
+        <li class="mobile-nav__item">
+            <a class="<%= path === '/' ? 'active' : '' %>" href="/">Library</a>
+        </li>
+        <li class="mobile-nav__item">
+            <a class="<%= path === '/admin/add-movie' ? 'active' : '' %>" href="/admin/add-movie">Add Movie
+            </a>
+        </li>
+    </ul>
+</nav>
